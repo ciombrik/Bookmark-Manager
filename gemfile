@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 
 group :development, :test do
-  gem "rspec"
+  gem "rspec", group: text
   gem "capybara"
   gem "selenium-webdriver"
   gem "sinatra"
   gem "sinatra-contrib"
+  gem "pg"
 end
