@@ -11,6 +11,12 @@ feature "viewing bookmarks" do
     expect(page).to have_content "http://www.google.com"
   end
 end
+describe ".create" do
+  it "creates a new bookmatk" do
+    Bookmark.create(url: "http://www.testbookmark.com")
+    expect(Bookmark.all).to include "http://www.testbookmark.com"
+  end
+end
 
 # feature "Index page" do
 #   scenario "index page displays hello world" do
